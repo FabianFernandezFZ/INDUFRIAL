@@ -725,11 +725,18 @@ body {
 }
 
 .gear-icon {
-  font-size: 52px;
   color: #0b2545;
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
+}
+
+.gear-lucide {
+  width: 52px;
+  height: 52px;
+  stroke-width: 1.75;
 }
 
 .gear-center-dot {
