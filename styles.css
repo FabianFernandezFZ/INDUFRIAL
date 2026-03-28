@@ -34,6 +34,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 .container {
   width: min(1120px, 92vw);
   margin: 0 auto;
@@ -77,7 +82,7 @@ p {
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--accent);
+  color: #9fd1f6;
   font-size: 0.82rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -86,9 +91,9 @@ p {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 20;
-  background: rgba(244, 247, 250, 0.9);
-  border-bottom: 1px solid rgba(13, 60, 102, 0.12);
+  z-index: 30;
+  background: rgba(8, 17, 26, 0.82);
+  border-bottom: 1px solid rgba(159, 209, 246, 0.18);
   backdrop-filter: blur(8px);
 }
 
@@ -105,6 +110,7 @@ p {
   align-items: center;
   gap: 0.6rem;
   font-weight: 800;
+  color: #fff;
 }
 
 .brand-mark {
@@ -136,7 +142,7 @@ p {
 .menu-toggle span {
   width: 1.35rem;
   height: 2px;
-  background: var(--text);
+  background: #fff;
 }
 
 .main-nav {
@@ -144,8 +150,8 @@ p {
   left: 0;
   right: 0;
   top: 74px;
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
+  background: #0b1928;
+  border-bottom: 1px solid rgba(159, 209, 246, 0.18);
   padding: 1.1rem 4vw 1.35rem;
   display: none;
   flex-direction: column;
@@ -154,7 +160,7 @@ p {
 
 .main-nav a {
   font-weight: 500;
-  color: #223648;
+  color: #e7f0f7;
 }
 
 .main-nav.is-open {
@@ -182,30 +188,47 @@ p {
 }
 
 .btn-ghost {
-  border-color: rgba(17, 32, 51, 0.24);
+  color: #e8f1f8;
+  border-color: rgba(232, 241, 248, 0.6);
 }
 
 .btn-ghost:hover {
-  background: #e7edf4;
+  background: rgba(232, 241, 248, 0.14);
 }
 
 .btn-nav {
   margin-top: 0.3rem;
-  border-color: rgba(13, 60, 102, 0.2);
+  border-color: rgba(159, 209, 246, 0.4);
 }
 
 .hero {
-  background: radial-gradient(circle at top right, #d8ecfa 0%, #f4f7fa 52%);
+  position: relative;
+  min-height: 80vh;
+  display: grid;
+  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, rgba(3, 14, 26, 0.84), rgba(3, 14, 26, 0.56));
 }
 
 .hero-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 1.6rem;
 }
 
 .hero-copy {
   margin-top: 1rem;
-  color: var(--muted);
+  color: #d6e5f4;
   max-width: 58ch;
 }
 
@@ -217,11 +240,11 @@ p {
 }
 
 .hero-panel {
-  background: #112b42;
+  background: rgba(7, 28, 47, 0.9);
   color: #fff;
   padding: 1.25rem;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(159, 209, 246, 0.24);
 }
 
 .hero-panel h2 {
@@ -245,7 +268,6 @@ p {
 }
 
 .stats-grid,
-.cards-grid,
 .benefits-grid,
 .service-strip {
   display: grid;
@@ -253,9 +275,9 @@ p {
 }
 
 .stats-grid article,
-.card,
 .benefits-grid article,
-.service-strip article {
+.service-strip article,
+.solution-content {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -269,14 +291,35 @@ p {
   color: var(--primary);
 }
 
-.card p,
+.solution-item {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  align-items: stretch;
+}
+
+.solution-image-wrap,
+.media-wrap {
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 240px;
+  box-shadow: var(--shadow);
+}
+
+.section-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.solution-content p,
 .benefits-grid p,
 .service-strip p {
   margin-top: 0.65rem;
   color: var(--muted);
 }
 
-.card ul {
+.solution-content ul {
   margin: 0.9rem 0 0;
   padding-left: 1.1rem;
   color: #203649;
@@ -299,11 +342,8 @@ p {
   align-items: start;
 }
 
-.feature-box {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: var(--radius);
-  padding: 1.2rem;
+.media-split {
+  align-items: stretch;
 }
 
 .check-list {
@@ -415,17 +455,24 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .cards-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .solution-item,
+  .media-split {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .solution-item.reverse > :first-child,
+  .reverse-desktop > :first-child {
+    order: 2;
+  }
+
+  .solution-item.reverse > :last-child,
+  .reverse-desktop > :last-child {
+    order: 1;
   }
 
   .benefits-grid,
   .service-strip {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .split-grid {
-    grid-template-columns: 1.2fr 1fr;
   }
 
   .footer-grid {
