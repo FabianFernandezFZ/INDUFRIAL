@@ -1,1 +1,3 @@
-// Diapositiva estática: no se requiere lógica JavaScript.
+if (window.lucide) {
+  window.lucide.createIcons();
+}
