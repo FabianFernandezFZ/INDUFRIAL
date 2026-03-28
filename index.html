@@ -1,186 +1,317 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canal Digital Indufrial - Landing Ejecutiva</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <style>
-        :root {
-            --blue-dark: #0B2545;
-            --gray-dark: #111827;
-            --gray-medium: #6B7280;
-            --gray-light: #9CA3AF;
-            --border-color: #E5E7EB;
-            --white: #FFFFFF;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--white);
-            color: var(--gray-dark);
-            line-height: 1.5;
-        }
-
-        /* Contenedor General */
-        .hero-section {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 90px 48px 80px 48px;
-            text-align: center;
-        }
-
-        /* Bloque Superior */
-        .hero-title {
-            color: var(--blue-dark);
-            font-weight: 700;
-            font-size: 64px;
-            line-height: 1.05;
-            margin-bottom: 22px;
-        }
-
-        .hero-subtitle {
-            color: var(--gray-medium);
-            font-weight: 400;
-            font-size: 28px;
-        }
-
-        .divider {
-            width: 100%;
-            max-width: 820px;
-            height: 1px;
-            background-color: var(--border-color);
-            margin: 28px auto 26px auto;
-        }
-
-        .support-line {
-            color: var(--gray-light);
-            font-weight: 500;
-            font-size: 18px;
-        }
-
-        /* Bloque Inferior: Tarjetas */
-        .cards-container {
-            margin-top: 70px;
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            background-color: var(--white);
-            border: 1px solid var(--border-color);
-            border-radius: 18px;
-            width: 250px;
-            height: 210px;
-            padding: 28px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;
-        }
-
-        .card-icon {
-            color: var(--blue-dark);
-            margin-bottom: 18px;
-        }
-
-        .card-title {
-            color: var(--gray-dark);
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 1.25;
-            text-align: center;
-        }
-
-        /* Responsive - Mobile */
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 60px 20px 60px 20px;
-            }
-
-            .hero-title {
-                font-size: 40px;
-            }
-
-            .hero-subtitle {
-                font-size: 22px;
-            }
-
-            .support-line {
-                font-size: 16px;
-            }
-
-            .cards-container {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 16px;
-                justify-items: center;
-            }
-
-            .card {
-                width: 100%;
-                max-width: 250px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canal Digital Indufrial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
+  <section class="hero-section">
+    <header>
+      <h1 class="hero-title">Canal Digital Indufrial</h1>
+      <p class="hero-subtitle">Adaptación a nuevas dinámicas de mercado</p>
+      <div class="hero-divider"></div>
+      <p class="support-line">Canal complementario · Nuevos clientes · Fortalecimiento comercial</p>
+    </header>
 
-    <section class="hero-section">
-        <header>
-            <h1 class="hero-title">Canal Digital Indufrial</h1>
-            <p class="hero-subtitle">Adaptación a nuevas dinámicas de mercado</p>
-            <div class="divider"></div>
-            <p class="support-line">Canal complementario · Nuevos clientes · Fortalecimiento comercial</p>
-        </header>
+    <div class="cards-container">
+      <div class="card">
+        <i data-lucide="store" class="card-icon" width="50" height="50"></i>
+        <h3 class="card-title">Pequeños negocios</h3>
+      </div>
+      <div class="card">
+        <i data-lucide="building-2" class="card-icon" width="50" height="50"></i>
+        <h3 class="card-title">Clientes corporativos</h3>
+      </div>
+      <div class="card">
+        <i data-lucide="container" class="card-icon" width="50" height="50"></i>
+        <h3 class="card-title">Vending</h3>
+      </div>
+      <div class="card">
+        <i data-lucide="globe" class="card-icon" width="50" height="50"></i>
+        <h3 class="card-title">Internacional</h3>
+      </div>
+    </div>
+  </section>
 
-        <div class="cards-container">
-            <div class="card">
-                <div class="card-icon">
-                    <i data-lucide="store" width="60" height="60"></i>
-                </div>
-                <h3 class="card-title">Pequeños negocios<br>(HORECA / tiendas)</h3>
+  <section class="behavior-section">
+    <div class="behavior-container">
+      <div class="behavior-content">
+        <h2 class="section-title">Cómo están comprando hoy los clientes</h2>
+        <ul class="behavior-list">
+          <li><span class="check-icon"><i data-lucide="check" width="20" height="20"></i></span><p>Buscan desde el <strong>celular</strong></p></li>
+          <li><span class="check-icon"><i data-lucide="check" width="20" height="20"></i></span><p>Comparan <strong>antes de contactar</strong></p></li>
+          <li><span class="check-icon"><i data-lucide="check" width="20" height="20"></i></span><p>Esperan <strong>respuesta inmediata</strong></p></li>
+          <li><span class="check-icon"><i data-lucide="check" width="20" height="20"></i></span><p>No dependen únicamente del vendedor</p></li>
+        </ul>
+      </div>
+
+      <div class="behavior-visual">
+        <div class="device-mockup animate-float">
+          <div class="google-search-phase">
+            <div class="search-bar-sim">
+              <i data-lucide="search" width="14" height="14"></i>
+              <span class="typing-text">comprar vitrina vertical...</span>
             </div>
+          </div>
 
-            <div class="card">
-                <div class="card-icon">
-                    <i data-lucide="building-2" width="60" height="60"></i>
-                </div>
-                <h3 class="card-title">Clientes corporativos</h3>
+          <div class="result-phase">
+            <div class="featured-product-card">
+              <div class="ad-badge">Anuncio • Indufrial</div>
+              <img src="https://cdn.shopify.com/s/files/1/0913/4066/9295/files/forte-v40-rhc.webp?v=1774718866" class="p-img-result" alt="Vitrina Forte V40" />
+              <h4 class="p-title">Vitrina Forte V40</h4>
+              <p class="p-desc">Ideal para tu negocio. Entrega rápida.</p>
+              <div class="fake-click-btn">
+                <i data-lucide="message-circle" width="14" height="14"></i> Cotizar por WhatsApp
+              </div>
             </div>
+          </div>
 
-            <div class="card">
-                <div class="card-icon">
-                    <i data-lucide="container" width="60" height="60"></i>
-                </div>
-                <h3 class="card-title">Vending</h3>
+          <div class="whatsapp-chat-phase">
+            <div class="chat-header">
+              <div class="online-dot"></div>
+              <span>Asesor Indufrial</span>
             </div>
-
-            <div class="card">
-                <div class="card-icon">
-                    <i data-lucide="globe" width="60" height="60"></i>
-                </div>
-                <h3 class="card-title">Proyectos internacionales</h3>
+            <div class="chat-body">
+              <div class="msg outgoing">Hola, me interesa esta vitrina. ¿Qué precio tiene?</div>
+              <div class="msg incoming">¡Hola! Un gusto saludarte. 👋</div>
+              <div class="msg incoming">La Vitrina Forte V40 está en promoción hoy. ¿Para qué ciudad la necesitas?</div>
+              <div class="typing-indicator">Asesor está escribiendo...</div>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        lucide.createIcons();
-    </script>
+  <section class="evolution-section">
+    <div class="evolution-header">
+      <h2 class="frase-impacto">El comportamiento ya cambió. <span class="accent-text">El canal aún no.</span></h2>
+      <p class="titulo-grafico">Evolución de la demanda en canales digitales (2023 - 2025)</p>
+    </div>
+
+    <div class="bars-container">
+      <div class="bar-group">
+        <div class="bar-info">
+          <span class="bar-label">Uso del celular para búsqueda y compra</span>
+          <span class="bar-percentage">78%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill green" style="--target-width: 78%"></div></div>
+      </div>
+
+      <div class="bar-group">
+        <div class="bar-info">
+          <span class="bar-label">Investigación online antes de contactar</span>
+          <span class="bar-percentage">72%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill blue" style="--target-width: 72%"></div></div>
+      </div>
+
+      <div class="bar-group">
+        <div class="bar-info">
+          <span class="bar-label">Expectativa de respuesta inmediata (&lt; 1h)</span>
+          <span class="bar-percentage">63%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill blue-dark" style="--target-width: 63%"></div></div>
+      </div>
+
+      <div class="years-footer">
+        <span>Año 2023</span>
+        <span>Año 2024</span>
+        <span>Proyección 2025*</span>
+      </div>
+    </div>
+
+    <p class="source-txt">Fuentes: Google B2B Journey, Salesforce &amp; McKinsey Pulse. *Datos proyectados al cierre de año.</p>
+  </section>
+
+  <section class="arquitectura-seccion">
+    <div class="main-container-arch">
+      <h2 class="arch-title">Arquitectura del sistema</h2>
+      <p class="arch-subtitle">Componentes claves para captar y gestionar oportunidades.</p>
+
+      <div class="diagram-space">
+        <svg class="arrows-layer-arch" viewBox="0 0 1000 550" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#CBD5E1" />
+            </marker>
+          </defs>
+          <path class="arrow-line" d="M500,80 Q350,100 200,210" />
+          <path class="arrow-line" d="M500,80 Q650,100 800,210" />
+          <path class="arrow-line" d="M300,320 L440,320" />
+          <path class="arrow-line" d="M700,320 L560,320" />
+        </svg>
+
+        <div class="center-gear-arch">
+          <svg viewBox="0 0 100 100" class="spinning-arch" aria-hidden="true">
+            <path d="M94.5,43.4l-9.8-1.5c-0.8-3.3-2-6.4-3.6-9.3l6.5-7.6c1.1-1.3,0.9-3.2-0.3-4.4l-6.4-6.4c-1.2-1.2-3.1-1.4-4.4-0.3l-7.6,6.5c-2.9-1.6-6-2.9-9.3-3.6l-1.5-9.8C57.9,0.7,56,0,54.2,0h-9c-1.8,0-3.6,0.7-3.9,2.4l-1.5,9.8c-3.3,0.8-6.4,2-9.3,3.6l-7.6-6.5c-1.3-1.1-3.2-0.9-4.4,0.3l-6.4,6.4c-1.2,1.2-1.4,3.1-0.3,4.4l6.5,7.6c-1.6,2.9-2.9,6-3.6,9.3l-9.8,1.5C0.7,43.8,0,45.7,0,47.5v9c0,1.8,0.7,3.6,2.4,3.9l9.8,1.5c0.8,3.3,2,6.4,3.6,9.3l-6.5,7.6c-1.1,1.3-0.9,3.2,0.3,4.4l6.4,6.4c1.2,1.2,3.1,1.4,4.4,0.3l7.6-6.5c2.9,1.6,6,2.9,9.3,3.6l1.5,9.8c0.3,1.7,2.1,2.4,3.9,2.4h9c1.8,0,3.6-0.7,3.9-2.4l1.5-9.8c3.3-0.8,6.4-2,9.3-3.6l7.6,6.5c1.3,1.1,3.2,0.9,4.4-0.3l6.4-6.4c1.2-1.2,1.4-3.1,0.3-4.4l-6.5-7.6c1.6-2.9,2.9-6,3.6-9.3l9.8-1.5c1.7-0.3,2.4-2.1,2.4-3.9v-9C100,45.7,96.2,43.7,94.5,43.4z M50,67c-9.4,0-17-7.6-17-17c0-9.4,7.6-17,17-17s17,7.6,17,17C67,59.4,59.4,67,50,67z"/>
+            <circle cx="50" cy="50" r="10" fill="#A3E635" />
+          </svg>
+        </div>
+
+        <div class="arch-card card-trafico">
+          <h3>📢 Tráfico</h3>
+          <span class="badge b-vis">Visibilidad</span>
+          <ul class="arch-list">
+            <li>Google, YouTube</li>
+            <li>Ads segmentadas</li>
+            <li>Email estratégico</li>
+          </ul>
+        </div>
+
+        <div class="arch-card card-web">
+          <h3>💻 Web</h3>
+          <span class="badge b-cap">Captación</span>
+          <ul class="arch-list">
+            <li>Sitio para captar leads</li>
+            <li>Segmentación por área</li>
+            <li>Contenidos relevantes</li>
+          </ul>
+        </div>
+
+        <div class="arch-card card-crm">
+          <h3>🗄️ CRM</h3>
+          <span class="badge b-ges">Gestión</span>
+          <ul class="arch-list">
+            <li>Registro de prospectos</li>
+            <li>Alertas y seguimiento</li>
+            <li>Integración comercial</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="conditions-section">
+    <div class="conditions-container">
+      <h2 class="conditions-title">Condiciones para activar el canal</h2>
+
+      <div class="diagram-viewport">
+        <svg class="arrows-canvas" viewBox="0 0 1000 760" aria-hidden="true">
+          <defs>
+            <marker id="arrowhead-light" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#CBD5E1" />
+            </marker>
+          </defs>
+
+          <path class="arrow-path" d="M470,300 Q400,215 330,230" marker-end="url(#arrowhead-light)" />
+          <path class="arrow-path" d="M530,300 Q600,215 670,230" marker-end="url(#arrowhead-light)" />
+          <path class="arrow-path" d="M440,325 Q350,350 310,500" marker-end="url(#arrowhead-light)" />
+          <path class="arrow-path" d="M560,325 Q650,350 690,500" marker-end="url(#arrowhead-light)" />
+
+          <path class="arrow-path straight" d="M470,360 Q400,455 330,690" marker-end="url(#arrowhead-light)" />
+          <path class="arrow-path straight" d="M500,360 L500,690" marker-end="url(#arrowhead-light)" />
+          <path class="arrow-path straight" d="M530,360 Q600,455 670,690" marker-end="url(#arrowhead-light)" />
+        </svg>
+
+        <div class="core-node" aria-label="Sistema operativo del canal">
+          <div class="gear-icon spinning">
+            <i class="fa-solid fa-gear" aria-hidden="true"></i>
+            <div class="gear-center-dot"></div>
+          </div>
+          <div class="core-text">
+            <span>Sistema operativo</span>
+            <span>del canal</span>
+          </div>
+        </div>
+
+        <div class="cond-card pos-tech">
+          <div class="card-header">
+            <i data-lucide="laptop" class="icon-lucide"></i>
+            <h3>Tecnología</h3>
+          </div>
+          <ul class="check-list">
+            <li>Conexión de herramientas</li>
+            <li>Automatización</li>
+            <li>Integración CRM / WhatsApp / SAP</li>
+          </ul>
+        </div>
+
+        <div class="cond-card pos-inter">
+          <div class="card-header">
+            <i data-lucide="globe" class="icon-lucide"></i>
+            <h3>Internacional</h3>
+          </div>
+          <ul class="check-list">
+            <li>Mercados objetivo</li>
+            <li>Condiciones de exportación</li>
+            <li>Proceso comercial exterior</li>
+          </ul>
+        </div>
+
+        <div class="cond-card pos-qual">
+          <div class="card-header">
+            <i data-lucide="shopping-bag" class="icon-lucide"></i>
+            <h3>Calidad</h3>
+          </div>
+          <ul class="check-list">
+            <li>Políticas de venta</li>
+            <li>Términos y condiciones</li>
+            <li>Facturación operativa</li>
+          </ul>
+        </div>
+
+        <div class="cond-card pos-fin">
+          <div class="card-header">
+            <i data-lucide="trending-up" class="icon-lucide"></i>
+            <h3>Financiera</h3>
+          </div>
+          <ul class="check-list">
+            <li>Costos y márgenes</li>
+            <li>Condiciones comerciales</li>
+            <li>Base de precios</li>
+          </ul>
+        </div>
+
+        <div class="cond-card pos-vend">
+          <div class="card-header">
+            <i data-lucide="layout-grid" class="icon-lucide"></i>
+            <h3>Vending</h3>
+          </div>
+          <ul class="check-list">
+            <li>Modelo de venta</li>
+            <li>Flujo comercial</li>
+            <li>Requerimientos específicos</li>
+          </ul>
+        </div>
+
+        <div class="cond-card pos-comerci">
+          <div class="card-header">
+            <i data-lucide="building" class="icon-lucide"></i>
+            <h3>Comercio</h3>
+          </div>
+          <ul class="check-list">
+            <li>Zonas y distribuidores</li>
+            <li>Reglas de canal</li>
+            <li>Información de mercado</li>
+          </ul>
+        </div>
+
+        <div class="cond-card pos-commercial">
+          <div class="card-header">
+            <i data-lucide="file-text" class="icon-lucide"></i>
+            <h3>Comercial</h3>
+          </div>
+          <ul class="check-list">
+            <li>Zonas y distribuidores</li>
+            <li>Reglas de canal</li>
+            <li>Información de mercado</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer-note">Sin estas condiciones, el canal no escala.</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
