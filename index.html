@@ -1,53 +1,186 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>INDUFRIAL | Proyecto Canal Directo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main class="slide" role="main" aria-label="Diapositiva de apertura del proyecto canal directo">
-      <div class="overlay"></div>
-      <section class="content">
-        <p class="kicker">PROYECTO CANAL DIRECTO</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canal Digital Indufrial - Landing Ejecutiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        :root {
+            --blue-dark: #0B2545;
+            --gray-dark: #111827;
+            --gray-medium: #6B7280;
+            --gray-light: #9CA3AF;
+            --border-color: #E5E7EB;
+            --white: #FFFFFF;
+        }
 
-        <h1>
-          Instalar canal de venta directa
-          <span>en 90 días</span>
-        </h1>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <p class="subtitle">
-          Alinear las áreas clave para viabilizar el canal directo sin afectar la relación con distribuidores.
-        </p>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--white);
+            color: var(--gray-dark);
+            line-height: 1.5;
+        }
 
-        <div class="pillars" aria-label="Tres ejes del proyecto">
-          <article class="pillar">
-            <p class="number">01</p>
-            <p class="label">Construir un canal directo controlado</p>
-          </article>
-          <article class="pillar">
-            <p class="number">02</p>
-            <p class="label">Mantener convivencia con distribuidores</p>
-          </article>
-          <article class="pillar">
-            <p class="number">03</p>
-            <p class="label">Definir responsabilidades por área</p>
-          </article>
+        /* Contenedor General */
+        .hero-section {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 90px 48px 80px 48px;
+            text-align: center;
+        }
+
+        /* Bloque Superior */
+        .hero-title {
+            color: var(--blue-dark);
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 1.05;
+            margin-bottom: 22px;
+        }
+
+        .hero-subtitle {
+            color: var(--gray-medium);
+            font-weight: 400;
+            font-size: 28px;
+        }
+
+        .divider {
+            width: 100%;
+            max-width: 820px;
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 28px auto 26px auto;
+        }
+
+        .support-line {
+            color: var(--gray-light);
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        /* Bloque Inferior: Tarjetas */
+        .cards-container {
+            margin-top: 70px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            width: 250px;
+            height: 210px;
+            padding: 28px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .card-icon {
+            color: var(--blue-dark);
+            margin-bottom: 18px;
+        }
+
+        .card-title {
+            color: var(--gray-dark);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.25;
+            text-align: center;
+        }
+
+        /* Responsive - Mobile */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 20px 60px 20px;
+            }
+
+            .hero-title {
+                font-size: 40px;
+            }
+
+            .hero-subtitle {
+                font-size: 22px;
+            }
+
+            .support-line {
+                font-size: 16px;
+            }
+
+            .cards-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                justify-items: center;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <header>
+            <h1 class="hero-title">Canal Digital Indufrial</h1>
+            <p class="hero-subtitle">Adaptación a nuevas dinámicas de mercado</p>
+            <div class="divider"></div>
+            <p class="support-line">Canal complementario · Nuevos clientes · Fortalecimiento comercial</p>
+        </header>
+
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-icon">
+                    <i data-lucide="store" width="60" height="60"></i>
+                </div>
+                <h3 class="card-title">Pequeños negocios<br>(HORECA / tiendas)</h3>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i data-lucide="building-2" width="60" height="60"></i>
+                </div>
+                <h3 class="card-title">Clientes corporativos</h3>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i data-lucide="container" width="60" height="60"></i>
+                </div>
+                <h3 class="card-title">Vending</h3>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i data-lucide="globe" width="60" height="60"></i>
+                </div>
+                <h3 class="card-title">Proyectos internacionales</h3>
+            </div>
         </div>
+    </section>
 
-        <p class="closing">
-          El objetivo no es improvisar un nuevo canal, sino ordenar su ejecución con criterio de negocio.
-        </p>
-      </section>
-    </main>
-
-    <script src="script.js"></script>
-  </body>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
 </html>
