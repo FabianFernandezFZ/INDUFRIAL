@@ -123,3 +123,203 @@ body {
         max-width: 250px;
     }
 }
+
+
+.customer-shift-section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 100px 48px;
+    background-color: #FFFFFF;
+}
+
+.customer-shift-grid {
+    display: grid;
+    grid-template-columns: 56fr 44fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.customer-shift-title {
+    color: #0B2545;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.08;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.customer-shift-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.customer-shift-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #374151;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.35;
+}
+
+.customer-shift-item strong {
+    font-weight: 600;
+}
+
+.check-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background-color: #22C55E;
+    color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.check-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 3;
+}
+
+.customer-shift-visual {
+    position: relative;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-illustration {
+    width: min(100%, 300px);
+    height: 520px;
+    border: 2px solid #DCE6F2;
+    border-radius: 34px;
+    padding: 18px 14px;
+    background-color: #FFFFFF;
+}
+
+.phone-notch {
+    width: 120px;
+    height: 10px;
+    border-radius: 999px;
+    background-color: #E5E7EB;
+    margin: 0 auto 16px;
+}
+
+.phone-screen {
+    border: 1px solid #E5E7EB;
+    border-radius: 24px;
+    height: calc(100% - 28px);
+    padding: 18px 16px;
+}
+
+.ui-search-bar,
+.ui-row,
+.ui-contact-pill {
+    border-radius: 12px;
+    background-color: #E5E7EB;
+}
+
+.ui-search-bar {
+    height: 34px;
+    margin-bottom: 22px;
+}
+
+.ui-row {
+    height: 58px;
+    margin-bottom: 12px;
+}
+
+.ui-row-main {
+    height: 84px;
+    background-color: #DCE6F2;
+}
+
+.ui-contact-pill {
+    margin-top: 20px;
+    height: 42px;
+    width: 70%;
+    background-color: rgba(34, 197, 94, 0.22);
+}
+
+.floating-chip {
+    position: absolute;
+    border: 1px solid #DCE6F2;
+    background-color: #FFFFFF;
+    color: #6B7280;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 999px;
+    padding: 8px 14px;
+}
+
+.chip-search {
+    top: 102px;
+    right: 10px;
+}
+
+.chip-compare {
+    top: 228px;
+    left: 8px;
+}
+
+.chip-contact {
+    bottom: 98px;
+    right: 24px;
+}
+
+@media (max-width: 768px) {
+    .customer-shift-section {
+        padding: 70px 20px;
+    }
+
+    .customer-shift-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .customer-shift-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .customer-shift-list {
+        gap: 18px;
+    }
+
+    .customer-shift-item {
+        font-size: 18px;
+    }
+
+    .check-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .customer-shift-visual {
+        min-height: 420px;
+    }
+
+    .phone-illustration {
+        height: 460px;
+        max-width: 270px;
+    }
+
+    .chip-search {
+        right: 0;
+    }
+
+    .chip-compare {
+        left: 0;
+    }
+
+    .chip-contact {
+        right: 12px;
+    }
+}
